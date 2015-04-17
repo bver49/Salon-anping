@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+	<title>TEDxTainan 藝曲安平</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="fullPage.css"/>
+	<link rel="stylesheet" type="text/css" href="examples.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu'
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a  href="#firstPage">購票</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">活動介紹</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">交通資訊</a></li>
+</ul>
+
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<h1 style="height:20%;">藝曲安平</h1>
+		<a  class="button" href="http://www.accupass.com/go/tedxtainan2015s1">前往購票</a>
+	</div>
+
+	<div class="section" id="section1">
+
+	    <div class="slide">
+	    	<div class="content">
+	    		<img src="img/sch.png"  id="sch"/>
+	    		<img src="img/sch2.png" id="sch"/>
+	    		<img src="img/sch3.png" id="sch"/>
+	    		<img src="img/sch4.png" id="sch"/>
+	    	</div>
+		</div>
+
+	    <div class="slide">
+        	<div class="content">
+          		<img src="img/h.png" class="simg"/>	
+          		<p class="intro">
+        <strong>謝銘祐</strong> -
+		本土音樂製作及詞曲創作者，南吼音樂祭發起人。在台北歷經十年音樂製作人生涯，毅然於2000年回到故鄉台南，以滄桑敦厚的嗓音唱出對土地的情感，並熱血投入太陽花學運、台南「言論自由日」表演等社會改善活動，至今已創作《圖騰》，《台南》，《情‧也獸》等五張個人專輯，除了個人表演創作外，亦積極與在地音樂人組成麵包車樂團，研究、改編與創作台灣民謠，以熔鑄古典樂曲打動中高齡聽眾，帶著以歌曲改變世界的心情，踏遍醫療院所、老人安養中心義演，弦歌不止。
+          		</p>
+        	</div>
+		</div>
+
+	    <div class="slide">
+	    	<div class="content">
+        		<img src="img/s.png" class="simg"/>	
+          		<p class="intro">
+        <strong>宋健誠</strong> -
+        離鄉背井至台南求學，驚艷於安平壺、劍獅等陶藝文物，卻鮮少有人推廣。秉持對陶藝的熱愛，他決定留下並成立安平陶坊，重振傳統技藝的價值。 生根落地在安平創業，師傅幾度瀕臨放棄，資金的短缺、他人的否定。但走過最黑的夜便是黎明，隨著政府的肯定，宋建誠得以揮灑自己對安平的藝術理念。也因著當地居民逐漸熱絡的互動、談話，得以與在地締結更緊密的連結，賦予他的創作充滿當地人的情感與溫度。
+          		</p>
+      		</div>
+		</div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="content">
+			<a  href="https://www.google.com.tw/maps/place/%E5%AE%89%E5%B9%B349%E4%BA%BA%E6%96%87%E5%92%96%E5%95%A1%E9%A4%A8/@22.999296,120.166554,17z/data=!3m1!4b1!4m2!3m1!1s0x346e761b3be85e99:0x2a55dceae80ef94e"><img src="img/map.png"  class="map"></a>
+			<h1 style="font-size:15px;">地址:台南市安平區安平路49號</h1>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
