@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+    <title>TEDxTainan 負成長時代</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property='og:image' content='http://blog.tedxtainan.org/wp-content/uploads/2015/10/2015年會back.png' />
+    <link rel="stylesheet" type="text/css" href="fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="fullPage.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccddff', '#ccddff'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', 'lastPage'],
+            menu: '#menu'
+        });
+
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        if (location.hash != '' || location.hash != "#firstPage") {
+            location.hash = "#firstPage";
+            $('#topmenu').removeClass('otherpage')
+            $('#topmenu').addClass('firstpage');
+            $('#topmenu li a').css('color', 'white');
+            $('#barlogo').addClass('notshown');
+        }
+        $(window).on('hashchange', function() {
+            if (location.hash == "#3rdPage" || location.hash == "#4thpage" || location.hash == "#5thpage" || location.hash == "#3rdPage/1" || location.hash == "#3rdPage/2" || location.hash == "#4thpage/1" || location.hash == "#4thpage/2" || location.hash == "#5thpage/1" || location.hash == "#5thpage/2") {
+                $('#contact').addClass('notshown');
+                $(".fp-controlArrow").css('display', 'none');
+            } else {
+                $('#contact').removeClass('notshown')
+                $(".fp-controlArrow").css('display', 'block');
+            }
+            if (location.hash == "#firstPage" || location.hash == '') {
+                $('#topmenu').removeClass('otherpage')
+                $('#topmenu').addClass('firstpage');
+                $('#topmenu li a').css('color', 'white');
+                $('#barlogo').addClass('notshown');
+            } else if (location.hash == "#secondPage" || location.hash == "#5thpage" || location.hash == "#6thpage" || location.hash == "#6thpage/1" || location.hash == "#6thpage/2" || location.hash == "#6thpage/3" || location.hash == "#6thpage/4") {
+                $('#topmenu').removeClass('firstpage')
+                $('#topmenu').addClass('otherpage');
+                $('#topmenu li a').css('color', '#546E7A');
+                $('#barlogo').removeClass('notshown')
+                $("#barlogo").attr("src", "img/titleb.png")
+            } else {
+                $('#topmenu').removeClass('firstpage')
+                $('#topmenu').addClass('otherpage')
+                $('#topmenu li a').css('color', 'white');
+                $('#barlogo').removeClass('notshown')
+                $("#barlogo").attr("src", "img/title.png")
+            }
+            if (location.hash == "#lastPage") {
+                $('#contact').css('bottom', '38%');
+                $('#contact').css('color', '#D9D7DA');
+            } else {
+                $('#contact').css('bottom', '15px');
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <img src="img/title.png" width="10%" id="barlogo" class="otherlogo">
+    <ul id="topmenu">
+        <li><a href="#firstPage">首頁</a></li>
+        <li><a href="#3rdPage">活動內容</a></li>
+        <li><a href="#6thpage">講者介紹</a></li>
+        <li><a href="#lastPage">購票</a></li>
+    </ul>
+    <ul id="contact">
+        <li><a href="mailto:tedxtainan@gmail.com">Contact</a></li>
+        <li><a href="https://www.facebook.com/TEDxTainan">Facebook</a></li>
+        <li><a href="https://instagram.com/tedxtainan/">Instagram</a></li>
+    </ul>
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <div class="content">
+                <img class="logo" src="img/title.png" id="name">
+                <br>
+                <img class="logo" src="img/word.png" id="time">
+                <a href="#secondPage"><img src="img/arrow.png" class="arrow"></a>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="content">
+                <img src="img/box.png" id="box">
+                <p class="word">
+                    <br>最深的絕望裡，總有最美的驚喜
+                    <br>傳承在地記憶，顛覆時代想像
+                    <br>南台灣最大交流盛會</p>
+                <a href="#3rdPage"><img src="img/arrow.png" class="arrow"></a>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div style="background-color:rgba(0,0,0,0.3);position:absolute;width:100%;height:100%;"></div>
+            <div class="content" id="pic1" style="background-image:url(img/pic1.jpg);background-repeat:no-repeat;">
+                <p class="pword right">18分鐘的演講
+                    <br>多元想法的激盪</p>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="content" style="background-image:url(img/pic2.jpg);background-size:cover;background-repeat:no-repeat;">
+                <p class="pword center">講者交流，
+                    <br>了解背後的人生故事</p>
+            </div>
+        </div>
+        <div class="section" id="section4" style="background-image:url(img/pic3.jpg);background-size:cover;">
+            <div style="background-color:rgba(0,0,0,0.3);position:absolute;width:100%;height:100%;"></div>
+            <div class="content">
+                <p class="pword left">互動體驗，
+                    <br>不只帶回分享的感動</p>
+            </div>
+        </div>
+        <div class="section" id="section5">
+            <div class="slide">
+                <div class="content">
+                    <img src="img/te.jpg" class="simg">
+                    <p class="intro"><span class="pname">張鐵志</span>
+                        <br>重視媒體資訊力量的時代報導者｜報導者共同創辦人</p>
+                    <hr>
+                    <p class="intro">政治與文化評論人。 《報導者》的共同創辦人之一，期待透過新舊世代的交流，找出媒體新的可能。張鐵志專於討論國際政經、台灣政治、搖滾與文化，以及那些屬於時代焦躁的聲音。曾任香港雜誌《號外》主編，著有《聲音與憤怒》、《反叛的凝視》、《時代的噪音》等書。致力於深度調查報導，以及媒體獨立自主的價值。
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/can.jpg" class="simg">
+                    <p class="intro"><span class="pname">康容</span>
+                        <br>Microsoft Taiwan營運暨行銷事業群總經理｜創造機會勇於嘗試的精實企業家
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">擁有前瞻的國際視野，康容除了《TIME》雜誌、微軟高階管理人等職位，更曾任比爾 • 蓋茲的執行文膽，並負責推動創新與企業公民等倡議，在比爾 • 蓋茲身邊的日子，讓他從中觀察與學習，化為養分繼續自我精進。「Swing for the Fences」，他鼓勵每個人都應該鼓起勇氣、挑戰自我，哪怕最後失敗，所耗損的成本也遠比「長大」後要低，「抓緊機會，去做大事吧！」。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/chang.jpg" class="simg">
+                    <p class="intro"><span class="pname">張志祺</span>
+                        <br>資訊設計回應社會的現代說書人｜「圖文不符」共同發起人
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">你看過柯P粉專的「全民當家！大巨蛋！」嗎？或是關心自身醫療權益的「你為什麼要放棄治療呢？」？他們都是出自資訊設計行銷團隊—圖文不符。 共同創辦人張志祺，畢業於成大都計系，有感於資訊不透明與不對稱，將造成政府與民間之間難以跨越的鴻溝和對立。於是和一群朋友組成「圖文不符」團隊，用設計的手法，行銷的話語，把最重要的資訊傳達給大眾。「資訊對等了，我們才能開始對話、有效溝通。」希望透過資訊深度整理，創造鍵盤革命、達成雙向對話。
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/james.jpg" class="simg">
+                    <p class="intro"><span class="pname">James</span>
+                        <br>天馬行空結合實作的創新夢想家｜吸管教具Strawbees台灣區負責人
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">從小在美國長大的James，回台後擔任美語補習班教師，發現台灣的教育過於注重「背誦」，而缺少讓孩子實作的機會。因此，他將吸管教具Strawbees帶入台灣，希望透過吸管教具將課堂抽離傳統枯燥的模式，同時刺激孩子們天馬行空的思考、創造，並找回動手實作的樂趣。學習沒有邊界、夢想不會設限，James試圖以多元的教育模式，改革台灣的教育環境。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/jeng.jpeg" class="simg">
+                    <p class="intro"><span class="pname">詹明仁</span>
+                        <br>上緯科技 董事長特助｜「乘風破浪」的離岸發電開創者
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">負成長時代，層出不窮的汙染及霾害，都讓我們反思再生能源的替代方案。上緯科技，選擇「靠海吃飯」，研發綠能材料及能源開採技術，致力發展離岸風力發電。環境保護是每一個人的使命，只有環境不受破壞，經濟才能成長，企業才能永續生存。我們有責任向大家證明，一個被能源照亮的世界，同時可以是潔淨與美好的。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/huang.jpg" class="simg">
+                    <p class="intro"><span class="pname">黃威融</span>
+                        <br>用文字構築抒情時代的感性編輯｜前《小日子》總編輯
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">從大學時代便開始在文字上工作。曾創辦《在台北生存的一百個理由》，參與過《Shopping Design》、《提案 on the desk》編輯工作。2012年擔任《小日子》總編輯，也是創辦人之一。以抒情的編輯視角及獨立風格，為雜誌寫入生活質感，與貼近於讀者的細膩感受。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/tseng.jpg" class="simg">
+                    <p class="intro"><span class="pname">曾柏文</span>
+                        <br>udn Debate相對論主編、CNEX紀實頻道編輯總召｜知識社會搭橋者
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">台大化學轉心理系畢，後於英國倫敦政經與華威大學取得社會學碩博士。曾在英國、新加坡、香港、荷蘭從事研究工作，專長知識社會學。返台後投身公共書寫與媒體企劃，將自己定位為bridgemaker，嘗試在分歧記憶、價值信念、專家常民、以及科際觀點間搭橋。目前擔任CNEX紀實頻道編輯總召、udn Debate 相對論主編、udn Global 轉角國際顧問；並為《天下獨立評論》與《鳴人堂》專欄作家。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/yeng.jpg" class="simg">
+                    <p class="intro"><span class="pname">顏世樺</span>
+                        <br>古都保存再生文教基金會執行長｜城市老屋文藝復興的推動者
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">「老屋欣力」一詞近幾年已成老屋再生之代名詞，「欣力」代表老屋經過保存、整修後，也能夠滿足當代使用需求，並在其中體現新舊交融的美好。 古都基金會看見老屋再生此一興自民間草根力量的舊城復興運動正方興未艾，因此透過推動「老屋欣力」系列活動，讓大眾看到老屋所保存的城市記憶，也鼓勵民眾一起體驗、參與、關心老屋再生的活動及議題。
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/wang.jpg" class="simg">
+                    <p class="intro"><span class="pname">汪義勇</span>
+                        <br>阿勇家餐飲事業負責人｜立於傳統又超乎傳統的台南總舖師
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">台南總舖師汪義勇自八歲起，即利用課餘時間幫忙父親賣小吃及準備辦桌料理，後創立「阿勇家餐飲事業」，做外燴辦桌服務，維持傳統沒店名、沒招牌的特色，卻提升了辦桌文化的層次。阿勇師出國學習他人飲食文化的優點，並把自己對藝術的愛注入新菜色，把「辦桌」當作文化藝術，他說：「料理就跟作畫一樣，都是藝術，不能把空間全部填滿，要留白，看起來才精緻。」</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <img src="img/vanessa.jpg" class="simg">
+                    <p class="intro"><span class="pname">Vanessa</span>
+                        <br>台灣生理用品界第一教主｜為女性而綻放的現代女人花
+                        <br>
+                    </p>
+                    <hr>
+                    <p class="intro">月亮杯群眾募資召集人。大學期間曾任女性自覺社社長，致力提倡女性自主選擇權，期望女性能更了解自己的身心理。赴美交換期間的成長，不只孕育出「小棉條兒的部落格」，更催生了屬於台灣女生的棉條品牌《凱娜》。而目前專為生理期所設計，讓女生和月經能和平相處的月亮杯，更是她希望給女孩們的多樣選擇</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section6">
+            <div class="content">
+                <img src="img/ticket.png" id="ticket">
+                <div id="bar">
+                    <ul id="menu">
+                        <li id="buybutton"><a href="http://www.accupass.com/go/tedxtainan2015">即刻前往購票</a></li>
+                    </ul>
+                </div>
+                <div id="donate"><img src="img/logo1.png"><img src="img/logo2.png"><img src="img/logo3.png"><img src="img/logo4.png"><img src="img/logo17.jpg">
+                    <img src="img/logo6.png"><img src="img/logo7.png"><img src="img/logo8.png"><img src="img/logo9.png"><img src="img/logo10.png"><img src="img/logo11.png"><img src="img/logo12.png"><img src="img/logo13.png"><img src="img/logo14.jpg"><img src="img/logo15.jpeg"><img src="img/logo16.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
